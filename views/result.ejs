@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Result</title>
+  <!-- Survey results section formatting style in CSS -->
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .result-item {
+      margin-bottom: 10px;
+    }
+
+    .result-heading {
+      text-decoration: underline;
+    }
+
+    .go-back {
+      text-align: right;
+    }
+
+    .go-back input[type="submit"] {
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+
+    .go-back input[type="submit"]:hover {
+      background-color: #3676d6;
+    }
+  </style>
+</head>
+<!--Creating the view for survey results section -->
+<body>
+  <div class="container">
+    <h1 class="result-heading">Submitted Information</h1>
+    <div class="result-item">
+      <strong>Name:</strong> <%= name %>
+    </div>
+    <div class="result-item">
+      <strong>Location:</strong> <%= location %>
+    </div>
+    <div class="result-item">
+      <strong>Favorite Coding Language:</strong> <%= codingLanguage %>
+    </div>
+    <% if (comments) { %>
+      <div class="result-item">
+        <strong>Comments:</strong> <%= comments %>
+      </div>
+    <% } %>
+    
+    <div class="go-back">
+      <form action="/" method="GET">
+        <input type="submit" value="Go Back">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

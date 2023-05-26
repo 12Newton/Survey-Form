@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <!-- Survey form formatting style in CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit {
+      text-align: right;
+    }
+
+    .submit input[type="submit"] {
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+
+    .submit input[type="submit"]:hover {
+      background-color: #3676d6;
+    }
+  </style>
+</head>
+<!--Creating the view for survey form -->
+<body>
+  <div class="container">
+    <h1>Survey Form</h1>
+    <form action="/result" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+          <option value="">Select Location</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <option value="Australia">Australia</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="codingLanguage">Favorite Coding Language:</label>
+        <select id="codingLanguage" name="codingLanguage" required>
+          <option value="">Select Coding Language</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="C++">C++</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments (optional):</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      </div>
+
+      <div class="submit">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

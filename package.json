@@ -1,0 +1,16 @@
+{
+  "name": "surveyform",
+  "version": "1.0.0",
+  "description": "A Node.js and Express.js survey form application that collects user feedback. Users can submit their name, location, favorite programming language, and provide additional comments. The submitted information is displayed and can be used for analysis or feedback purposes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "student",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
